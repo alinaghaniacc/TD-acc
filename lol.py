@@ -24,9 +24,11 @@ def main():
     # Chemins des images de feedback
     feedback_images = {
         "pullman": "images/martial_feedback.png",
+        "pullman_2": "images/Feedback_Jennifer.png",
         "peugeot": "images/jens_feedback.png",
         "noli": "images/celine_feedback.png",
-        "genai": "images/François_feedback.png"
+        "genai": "images/François_feedback.png",
+        "chanel": "images/Feedback_Jason.png"
     }
     
     # Chemins des images de projet
@@ -423,29 +425,35 @@ def main():
             </div>
             <div class="split-right">
                 <div class="section-title">Compétences</div>
-                <div class="competency-box">Prompt Engineering</div>
-                <div class="competency-box">Développement Web</div>
-                <div class="competency-box">Gestion de Projet</div>
-                <div class="competency-box">Optimisation de Contenu</div>
+                <div class="competency-box">Prompt Engineering & Expertise IA</div>
+                <div class="competency-box">Gestion de Projet & Méthodologies Accenture</div>
+                <div class="competency-box">Autonomie sur les Livrables</div>
+                <div class="competency-box">Relation Client & Satisfaction</div>
+                <div class="competency-box">Veille Technologique & Innovation</div>
+                <div class="competency-box">Travail en Équipe & Collaboration</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
         
-        # Images
+        # Feedbacks côte à côte
         col1, col2 = st.columns(2)
+
+        # Feedback de Jennifer (à gauche)
         with col1:
-            # Utiliser l'image de l'interface Pullman
-            pullman_ui = load_image(project_images["pullman_ui"])
-            if pullman_ui:
-                st.image(pullman_ui, caption="Interface de Molière")
-            else:
-                st.image("https://via.placeholder.com/600x400", caption="Interface de Molière")
-        
+            pullman_feedback_2 = load_image(feedback_images["pullman_2"])
+            if pullman_feedback_2:
+                st.markdown("""
+                <div class="feedback-container">
+                    <div class="feedback-label">Feedback</div>
+                    <div class="feedback-content">
+                """, unsafe_allow_html=True)
+                st.image(pullman_feedback_2, caption="Feedback de Jennifer")
+                st.markdown("</div></div>", unsafe_allow_html=True)
+
+        # Feedback de Martial (à droite)
         with col2:
-            # Utiliser l'image de feedback de Martial avec style spécial
             pullman_feedback = load_image(feedback_images["pullman"])
             if pullman_feedback:
-                # Utiliser un conteneur similaire à celui de l'objectif
                 st.markdown("""
                 <div class="feedback-container">
                     <div class="feedback-label">Feedback</div>
@@ -453,12 +461,17 @@ def main():
                 """, unsafe_allow_html=True)
                 st.image(pullman_feedback, caption="Feedback de Martial")
                 st.markdown("</div></div>", unsafe_allow_html=True)
-            else:
-                st.image("https://via.placeholder.com/600x400", caption="Feedback client")
-        
-        col1, col2, col3 = st.columns([1, 1, 1])
-        with col2:
-            st.button("Voir le projet", key="pullman_btn")
+
+        # Interface Pullman en dessous
+        pullman_ui = load_image(project_images["pullman_ui"])
+        if pullman_ui:
+            st.markdown("""
+            <div class="feedback-container">
+                <div class="feedback-label">Solution Développée</div>
+                <div class="feedback-content">
+            """, unsafe_allow_html=True)
+            st.image(pullman_ui, caption="Interface Pullman Content Generation")
+            st.markdown("</div></div>", unsafe_allow_html=True)
 
     # Peugeot Tab
     with tabs[1]:
@@ -491,10 +504,11 @@ def main():
             </div>
             <div class="split-right">
                 <div class="section-title">Compétences</div>
-                <div class="competency-box">Conception de Chatbot</div>
-                <div class="competency-box">Animation de Workshops</div>
-                <div class="competency-box">Ingénierie de Connaissances</div>
-                <div class="competency-box">Sécurité IA</div>
+                <div class="competency-box">Expertise Technique IA & Chatbots</div>
+                <div class="competency-box">Animation d'Ateliers & Leadership</div>
+                <div class="competency-box">Gestion des Risques & Guardrails</div>
+                <div class="competency-box">Compréhension Écosystème Client</div>
+                <div class="competency-box">Qualité des Livrables</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -505,7 +519,13 @@ def main():
             # Utiliser l'image du chatbot Peugeot
             peugeot_chatbot = load_image(project_images["peugeot_chatbot"])
             if peugeot_chatbot:
+                st.markdown("""
+                <div class="feedback-container">
+                    <div class="feedback-label">Solution Développée</div>
+                    <div class="feedback-content">
+                """, unsafe_allow_html=True)
                 st.image(peugeot_chatbot, caption="Interface chatbot Peugeot")
+                st.markdown("</div></div>", unsafe_allow_html=True)
             else:
                 st.image("https://via.placeholder.com/600x400", caption="Interface chatbot Peugeot")
         
@@ -523,10 +543,6 @@ def main():
                 st.markdown("</div></div>", unsafe_allow_html=True)
             else:
                 st.image("https://via.placeholder.com/600x400", caption="Salon de l'Auto")
-        
-        col1, col2, col3 = st.columns([1, 1, 1])
-        with col2:
-            st.button("Voir le projet", key="peugeot_btn")
 
     # L'Oréal NOLI Tab
     with tabs[2]:
@@ -559,10 +575,11 @@ def main():
             </div>
             <div class="split-right">
                 <div class="section-title">Compétences</div>
-                <div class="competency-box">Génération d'Images par IA</div>
-                <div class="competency-box">Segmentation d'Images</div>
-                <div class="competency-box">Optimisation de Performance</div>
-                <div class="competency-box">Automatisation de Processus</div>
+                <div class="competency-box">Expertise Technique IA & Vision</div>
+                <div class="competency-box">Autonomie sur Périmètre Technique</div>
+                <div class="competency-box">Optimisation & Performance</div>
+                <div class="competency-box">Gestion de Multiples Tâches</div>
+                <div class="competency-box">Amélioration Continue</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -573,7 +590,13 @@ def main():
             # Utiliser l'image de l'application NOLI
             noli_app = load_image(project_images["noli_app"])
             if noli_app:
+                st.markdown("""
+                <div class="feedback-container">
+                    <div class="feedback-label">Solution Développée</div>
+                    <div class="feedback-content">
+                """, unsafe_allow_html=True)
                 st.image(noli_app, caption="Application NOLI")
+                st.markdown("</div></div>", unsafe_allow_html=True)
             else:
                 st.image("https://via.placeholder.com/600x400", caption="Application NOLI")
         
@@ -591,10 +614,6 @@ def main():
                 st.markdown("</div></div>", unsafe_allow_html=True)
             else:
                 st.image("https://via.placeholder.com/600x400", caption="Exemple de produit traité")
-        
-        col1, col2, col3 = st.columns([1, 1, 1])
-        with col2:
-            st.button("Voir le projet", key="loreal_btn")
 
     # Chanel Foresight Tab
     with tabs[3]:
@@ -628,35 +647,49 @@ def main():
             </div>
             <div class="split-right">
                 <div class="section-title">Compétences</div>
-                <div class="competency-box">Conception d'Expérience Interactive</div>
-                <div class="competency-box">Systèmes RAG</div>
-                <div class="competency-box">Visualisation de Données</div>
-                <div class="competency-box">Storytelling IA</div>
+                <div class="competency-box">Expertise RAG & Systèmes IA</div>
+                <div class="competency-box">Gestion de Projet Complexe</div>
+                <div class="competency-box">Rédaction de RFP/Propositions</div>
+                <div class="competency-box">Qualité & Innovation</div>
+                <div class="competency-box">Méthodologies Accenture</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
         
-        # Images
+        # Feedback de Jason en premier
+        chanel_feedback = load_image(feedback_images["chanel"])
+        if chanel_feedback:
+            st.markdown("""
+            <div class="feedback-container">
+                <div class="feedback-label">Feedback</div>
+                <div class="feedback-content">
+            """, unsafe_allow_html=True)
+            st.image(chanel_feedback, caption="Feedback de Jason")
+            st.markdown("</div></div>", unsafe_allow_html=True)
+
+        # Mind map et Vision 2050 côte à côte
         col1, col2 = st.columns(2)
         with col1:
-            # Utiliser l'image de la mind map Chanel
             chanel_mindmap = load_image(project_images["chanel_mindmap"])
             if chanel_mindmap:
+                st.markdown("""
+                <div class="feedback-container">
+                    <div class="feedback-label">Solution Développée</div>
+                    <div class="feedback-content">
+                """, unsafe_allow_html=True)
                 st.image(chanel_mindmap, caption="Mind map interactive")
-            else:
-                st.image("https://via.placeholder.com/600x400", caption="Mind map interactive")
-        
+                st.markdown("</div></div>", unsafe_allow_html=True)
+
         with col2:
-            # Utiliser l'image du storytelling Chanel
             chanel_story = load_image(project_images["chanel_story"])
             if chanel_story:
+                st.markdown("""
+                <div class="feedback-container">
+                    <div class="feedback-label">Solution Développée</div>
+                    <div class="feedback-content">
+                """, unsafe_allow_html=True)
                 st.image(chanel_story, caption="Interface Vision 2050")
-            else:
-                st.image("https://via.placeholder.com/600x400", caption="Interface Vision 2050")
-        
-        col1, col2, col3 = st.columns([1, 1, 1])
-        with col2:
-            st.button("Voir le projet", key="chanel_btn")
+                st.markdown("</div></div>", unsafe_allow_html=True)
 
     # Sephora Tab
     with tabs[4]:
@@ -703,10 +736,6 @@ def main():
             st.image("https://via.placeholder.com/600x400", caption="Dashboard KPIs")
         with col2:
             st.image("https://via.placeholder.com/600x400", caption="Réunion de cadrage")
-        
-        col1, col2, col3 = st.columns([1, 1, 1])
-        with col2:
-            st.button("Voir le projet", key="sephora_btn")
 
     # Extra Projects Tab
     with tabs[5]:
@@ -762,10 +791,6 @@ def main():
         else:
             st.image("https://via.placeholder.com/800x400", caption="GenAI Breakfast")
         
-        col1, col2, col3 = st.columns([1, 1, 1])
-        with col2:
-            st.button("Voir les détails", key="genai_btn")
-        
         # External Interventions
         st.markdown("""
         <div class="project-banner">
@@ -809,10 +834,6 @@ def main():
             st.image(mines_intervention, caption="Intervention École des Mines")
         else:
             st.image("https://via.placeholder.com/800x400", caption="Intervention École des Mines")
-        
-        col1, col2, col3 = st.columns([1, 1, 1])
-        with col2:
-            st.button("Voir les détails", key="interventions_btn")
 
     # Footer with Chanel-inspired design
     st.markdown("""
