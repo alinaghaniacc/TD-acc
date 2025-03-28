@@ -29,6 +29,7 @@ def main():
         "noli": "images/celine_feedback.png",
         "genai": "images/François_feedback.png",
         "chanel": "images/Feedback_Jason.png"
+        
     }
     
     # Chemins des images de projet
@@ -402,7 +403,7 @@ def main():
         """, unsafe_allow_html=True)
         
         # Profile image
-        profile_image = load_image("/Users/alina.ghani/Library/CloudStorage/OneDrive-Accenture/TD-accenture/images/mazarine.jpeg")
+        profile_image = load_image("images/mazarine.jpeg")
         if profile_image:
             st.image(profile_image)
 
@@ -437,7 +438,7 @@ def main():
             <div class="split-right">
                 <div class="section-title">Skills</div>
                 <div class="competency-box">Prompt Engineering & AI Expertise</div>
-                <div class="competency-box">Project Management & Accenture Methodologies</div>
+                <div class="competency-box">Project Management & Methodologies</div>
                 <div class="competency-box">Deliverable Autonomy</div>
                 <div class="competency-box">Client Relations & Satisfaction</div>
                 <div class="competency-box">Technology Watch & Innovation</div>
@@ -556,7 +557,7 @@ def main():
                 <div class="competency-box">Complex Project Management</div>
                 <div class="competency-box">RFP/Proposal Writing</div>
                 <div class="competency-box">Quality & Innovation</div>
-                <div class="competency-box">Accenture Methodologies</div>
+                <div class="competency-box">Project Methodologies</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -603,7 +604,7 @@ def main():
     <div class="footer">
         <div class="footer-title">Alina Ghani</div>
         <div class="footer-subtitle">AI & Tech Innovation Engineer</div>
-        <div class="footer-contact">alina.ghani@accenture.com | +33 6 36 12 27 62</div>
+        <div class="footer-contact">alina.ghani@gmail.com | +33 6 36 12 27 62</div>
     </div>
     """, unsafe_allow_html=True)
 
