@@ -9,9 +9,7 @@ def main():
         page_title="Alina Ghani | Portfolio",
         page_icon="✨",
         layout="wide",
-        initial_sidebar_state="collapsed",
-        menu_items=None,
-        theme="light"
+        initial_sidebar_state="collapsed"
     )
     
     # Fonction pour charger les images locales
