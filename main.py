@@ -403,7 +403,7 @@ def main():
         """, unsafe_allow_html=True)
         
         # Profile image
-        profile_image = load_image("images/mazarine.jpeg")
+        profile_image = load_image("images/VIE.jpeg")
         if profile_image:
             st.image(profile_image)
 
