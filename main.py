@@ -387,7 +387,7 @@ def main():
     st.markdown("""
     <div class="header">
         <div class="header-title">Alina Ghani</div>
-        <div class="header-subtitle">AI & Tech Innovation Engineer</div>
+        <div class="header-subtitle">PERFORMANCE MARKETING</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -603,7 +603,7 @@ def main():
     st.markdown("""
     <div class="footer">
         <div class="footer-title">Alina Ghani</div>
-        <div class="footer-subtitle">AI & Tech Innovation Engineer</div>
+        <div class="footer-subtitle">PERFORMANCE MARKETING</div>
         <div class="footer-contact">alina.ghani@gmail.com | +33 6 36 12 27 62</div>
     </div>
     """, unsafe_allow_html=True)
