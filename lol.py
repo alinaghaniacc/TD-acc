@@ -840,7 +840,7 @@ def main():
     <div class="footer">
         <div class="footer-title">Alina Ghani</div>
         <div class="footer-subtitle">CONSULTANTE DATA</div>
-        <div class="footer-contact">alina.ghani@accenture.com | +33 6 36 12 27 62</div>
+        <div class="footer-contact"> | +33 6 36 12 27 62</div>
     </div>
     """, unsafe_allow_html=True)
 
